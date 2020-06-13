@@ -20,13 +20,13 @@ spl_autoload_register(function($nomeClasse){
 
 // Essa função pegara o nome da classe e realizara o require
 // Neste caso da certo para classes que estão no mesmo arquivo
-function __autoload($nomeClasse){
+/*function __autoload($nomeClasse){
     var_dump($nomeClasse); // Consegue verificar quais as classes que foram chamadas
     require_once($nomeClasse.".php");
-}
+}*/
 
 
-$carro = new DelRey(); // a palavra new chama o método __autoload
-$carro->acelerar(10);
+//$carro = new DelRey(); // a palavra new chama o método __autoload
+//$carro->acelerar(10);
 
 ?>
