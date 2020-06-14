@@ -10,14 +10,18 @@ if($conn->connect_error){
     echo "Conexão realizada com sucesso";
 }
 
-$stmt = $conn->prepare("INSERT INTO tb_usuarios (deslogin, dessenha) VALUES(?, ?)");
-$stmt->bind_param("ss", $login, $pass); //esse método só é executado quando o execute for chamado
-$stmt->execute();
+//Inserindo registro
+//$conn->query("INSERT INTO tb_usuarios (deslogin, dessenha) VALUES('teste1','123' )");
 
-$login = 'user';
-$pass = '123456';
+//Buscando dados
+$result = $conn->query("SELECT * FROM tb_usuarios");
 
-$conn->query("INSERT INTO tb_usuarios (deslogin, dessenha) VALUES('teste1','123' )");
+$data = array();
 
+while($row = $result->fetch_array()){
+    array_push($data, $row);
+}
+
+echo json_encode($data);
 
 ?>
