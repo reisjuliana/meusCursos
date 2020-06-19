@@ -11,10 +11,14 @@ $stmt->execute();
 $stmt = $conn->prepare("UPDATE tb_usuarios SET deslogin = 'Puzi', dessenha = 'amoopaudochris' where idusuario = 1");
 $stmt->execute();
 
+// Deletando dados na tabela 
+$stmt = $conn->prepare("DELETE FROM tb_usuarios where idusuario = 1");
+$stmt->execute();
+
+
 // Buscando os dados na tabela 
 $stmt = $conn->prepare("SELECT * FROM tb_usuarios");
 $stmt->execute();
-
 
 // Exibindo os dados em tela 
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
