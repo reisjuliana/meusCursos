@@ -36,7 +36,4 @@ $usuario->loadById(21);
 $usuario->delete();
 echo $usuario;
 
-
-
-
 ?>
