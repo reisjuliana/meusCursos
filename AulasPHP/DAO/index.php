@@ -20,9 +20,22 @@ require_once("config.php");
 //$usuario->login("teste13", "123"); 
 //echo $usuario;
 
-$aluno = new Usuarios("reisjuliana", "201169123Juh");
-$aluno->insert();
-echo $aluno;
+//Inserir registro:
+//$aluno = new Usuarios("reisjuliana", "201169123Juh");
+//$aluno->insert();
+//echo $aluno;
+
+// Alterando dados
+//$usuario = new Usuarios;
+//$usuario->loadById(30);
+//$usuario->update("professor", "oiaquimerda");
+
+//Excluindo usuário:
+$usuario = new Usuarios;
+$usuario->loadById(21);
+$usuario->delete();
+echo $usuario;
+
 
 
 
