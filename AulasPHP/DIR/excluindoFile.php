@@ -6,4 +6,5 @@ unlink("teste.txt");
 
 mkdir("images");
 
+
 ?>
